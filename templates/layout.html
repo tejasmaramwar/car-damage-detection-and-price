@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Car Damage Assessment</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Century Gothic" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='design.css') }}">
+
+  <!-- Jasny Bootstrap -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+
+  <script src="{{ url_for('static', filename='index.js') }}"></script>
+</head>
+
+<!--Navigation Bar-->
+
+<body id="top">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{ url_for('home') }}">Auto Car</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#third">Assess Damage</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- First Container (Splash)-->
+  <div class="container-fluid bg-0 main-content-color text-center" id="first">
+    <h1 class="">Dont Worry!!</h1>
+    <h3 class="">Upload damaged part image and the rest leave it to us</h3>
+    <br>
+    <a href="#third" class="btn btn-info btn-lg ">
+      <span class="glyphicon glyphicon-phone"></span> Go to Damage Assessment
+    </a>
+  </div>
+
+  <!-- Second and Third Container (Results)-->
+  {% block content %}{% endblock %}
+
+</body>
+
+</html>
