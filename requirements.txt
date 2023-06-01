@@ -2,4 +2,3 @@ flask
 keras
 tensorflow
 numpy
-pickle
